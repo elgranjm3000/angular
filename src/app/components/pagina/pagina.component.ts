@@ -26,4 +26,8 @@ export class PaginaComponent implements OnInit {
     })
   }
 
+  redireccion(){
+    this._router.navigate(['/pagina-de-prueba','Joseph','Muentes']);
+  }
+
 }
