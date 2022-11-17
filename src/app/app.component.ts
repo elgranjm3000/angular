@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi proyecto inicial';
+  homeText = 'Bienvenido a angular 2';
 }
