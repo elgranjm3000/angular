@@ -1,6 +1,5 @@
 import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
-
 @Component({
   selector: 'app-peliculas',
   templateUrl: './peliculas.component.html',
@@ -12,7 +11,6 @@ export class PeliculasComponent implements OnInit,DoCheck, OnDestroy  {
   public peliculas: Array<any>;
   constructor() { 
     this.titlePelicula="Pelicula 2022"
-    console.log("1 constructor");
     this.peliculas = [
       new Pelicula("Spiderman 4",2019,"https://cdn.pixabay.com/photo/2019/02/20/10/51/spiderman-4008954__340.jpg"),
       new Pelicula("Matrix",1999,"https://cdn.pixabay.com/photo/2015/04/01/11/08/sillouette-702178__340.jpg"),
