@@ -10,6 +10,7 @@ export class PeliculasComponent implements OnInit,DoCheck, OnDestroy  {
   public titlePelicula:string;
   public peliculas: Pelicula[];
   public favorita?: Pelicula;
+  public fecha: any;
   constructor() { 
     this.titlePelicula="Pelicula 2022"
     this.peliculas = [
@@ -19,6 +20,8 @@ export class PeliculasComponent implements OnInit,DoCheck, OnDestroy  {
       
       
     ];
+    this.fecha = new Date(2022,10,21);
+    
 
   }
 

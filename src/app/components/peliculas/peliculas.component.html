@@ -2,8 +2,10 @@
 
 </app-slider>
 <div *ngIf="favorita">  
-    <h1>Favorita</h1>
-    {{ favorita.title }}
+    <h1>Pelicula Favorita</h1>
+    <h2>{{ favorita.title | uppercase }}</h2>
+    <h2>{{ favorita.year }}</h2>
+    <h3>{{ fecha | date }}</h3>
 </div>
 <div class="center">
     <section id="content">
