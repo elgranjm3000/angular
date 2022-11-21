@@ -8,7 +8,8 @@ import { Pelicula } from '../../models/pelicula';
 export class PeliculasComponent implements OnInit,DoCheck, OnDestroy  {
 
   public titlePelicula:string;
-  public peliculas: Array<any>;
+  public peliculas: Pelicula[];
+  public favorita?: Pelicula;
   constructor() { 
     this.titlePelicula="Pelicula 2022"
     this.peliculas = [
@@ -38,6 +39,12 @@ export class PeliculasComponent implements OnInit,DoCheck, OnDestroy  {
 
   ngOnDestroy (): void {
     console.log("el componente se va eliminar");
+  }
+
+  recibirPadre(event: Pelicula){
+    console.log(event);
+    this.favorita = event;
+    console.log(this.favorita);
   }
 
 }

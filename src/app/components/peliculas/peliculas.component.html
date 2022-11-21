@@ -1,6 +1,10 @@
 <app-slider [nombre]="'Peliculas'">
 
 </app-slider>
+<div *ngIf="favorita">  
+    <h1>Favorita</h1>
+    {{ favorita.title }}
+</div>
 <div class="center">
     <section id="content">
 
@@ -23,7 +27,10 @@
 
             <div *ngFor="let pelicula of peliculas let i = index">
                 <app-pelicula 
-                    [pelicula]="pelicula" >
+                    [pelicula]="pelicula" 
+                    (MarcarAPadre)="recibirPadre($event)"
+                    >
+                    
                 </app-pelicula>
             </div>
 
